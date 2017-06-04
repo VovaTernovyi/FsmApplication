@@ -1,0 +1,116 @@
+{ "fsm_items" : {
+"fsm_item": [
+      {
+        "action": "LOCK",
+        "start_doors_state": "AllUnlocked",
+        "start_alarm_state": "AlarmDisarmed",
+        "end_doors_state": "AllLocked",
+        "end_alarm_state": "AlarmDisarmed"
+      },
+      {
+        "action": "LOCK",
+        "start_doors_state": "DriverUnlocked",
+        "start_alarm_state": "AlarmDisarmed",
+        "end_doors_state": "AllLocked",
+        "end_alarm_state": "AlarmDisarmed"
+
+      },
+      {
+        "action": "LOCK",
+        "start_doors_state": "AllLocked",
+        "start_alarm_state": "AlarmDisarmed",
+        "end_doors_state": "AllLocked",
+        "end_alarm_state": "AlarmArmed"
+      },
+      {
+        "action": "LOCK",
+        "start_doors_state": "AllLocked",
+        "start_alarm_state": "AlarmArmed",
+        "end_doors_state": "AllLocked",
+        "end_alarm_state": "AlarmArmed"
+      },
+      {
+        "action": "LOCKx2",
+        "start_doors_state": "AllUnlocked",
+        "start_alarm_state": "AlarmDisarmed",
+        "end_doors_state": "AllLocked",
+        "end_alarm_state": "AlarmArmed"
+      },
+      {
+        "action": "LOCKx2",
+        "start_doors_state": "DriverUnlocked",
+        "start_alarm_state": "AlarmDisarmed",
+        "end_doors_state": "AllLocked",
+        "end_alarm_state": "AlarmArmed"
+      },
+      {
+        "action": "LOCKx2",
+        "start_doors_state": "AllLocked",
+        "start_alarm_state": "AlarmDisarmed",
+        "end_doors_state": "AllLocked",
+        "end_alarm_state": "AlarmArmed"
+      },
+      {
+        "action": "LOCKx2",
+        "start_doors_state": "AllLocked",
+        "start_alarm_state": "AlarmArmed",
+        "end_doors_state": "AllLocked",
+        "end_alarm_state": "AlarmArmed"
+      },
+      {
+        "action": "UNLOCK",
+        "start_doors_state": "AllUnlocked",
+        "start_alarm_state": "AlarmDisarmed",
+        "end_doors_state": "AllUnlocked",
+        "end_alarm_state": "AlarmDisarmed"
+      },
+      {
+        "action": "UNLOCK",
+        "start_doors_state": "DriverUnlocked",
+        "start_alarm_state": "AlarmDisarmed",
+        "end_doors_state": "DriverUnlocked",
+        "end_alarm_state": "AlarmDisarmed"
+      },
+      {
+        "action": "UNLOCK",
+        "start_doors_state": "AllLocked",
+        "start_alarm_state": "AlarmDisarmed",
+        "end_doors_state": "DriverUnlocked",
+        "end_alarm_state": "AlarmDisarmed"
+      },
+      {
+        "action": "UNLOCK",
+        "start_doors_state": "AllLocked",
+        "start_alarm_state": "AlarmArmed",
+        "end_doors_state": "DriverUnlocked",
+        "end_alarm_state": "AlarmDisarmed"
+      },
+      {
+        "action": "UNLOCKx2",
+        "start_doors_state": "AllUnlocked",
+        "start_alarm_state": "AlarmDisarmed",
+        "end_doors_state": "AllUnlocked",
+        "end_alarm_state": "AlarmDisarmed"
+      },
+      {
+        "action": "UNLOCKx2",
+        "start_doors_state": "DriverUnlocked",
+        "start_alarm_state": "AlarmDisarmed",
+        "end_doors_state": "DriverUnlocked",
+        "end_alarm_state": "AlarmDisarmed"
+      },
+      {
+        "action": "UNLOCKx2",
+        "start_doors_state": "AllLocked",
+        "start_alarm_state": "AlarmDisarmed",
+        "end_doors_state": "AllUnlocked",
+        "end_alarm_state": "AlarmDisarmed"
+      },
+      {
+        "action": "UNLOCKx2",
+        "start_doors_state": "AllLocked",
+        "start_alarm_state": "AlarmArmed",
+        "end_doors_state": "AllUnlocked",
+        "end_alarm_state": "AlarmDisarmed"
+      }
+]}}
