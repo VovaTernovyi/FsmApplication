@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Text -->
+    <dimen name="textview_status_text_size">24sp</dimen>
+
+    <!-- View -->
+    <dimen name="imageview_alarm_margin_top">64dp</dimen>
+    <dimen name="layout_buttons_margin_top">48dp</dimen>
+
+</resources>

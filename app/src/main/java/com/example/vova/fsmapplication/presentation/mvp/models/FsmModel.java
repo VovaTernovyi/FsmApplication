@@ -30,7 +30,7 @@ public class FsmModel {
         return fsm.getFsmItems();
     }
 
-    private String readJson() {
+    public String readJson() {
         InputStream is = AppCore.getInstance().getResources().openRawResource(R.raw.fsm);
         Writer writer = new StringWriter();
         char[] buffer = new char[1024];

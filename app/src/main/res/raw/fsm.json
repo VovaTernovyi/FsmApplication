@@ -13,7 +13,6 @@
         "start_alarm_state": "AlarmDisarmed",
         "end_doors_state": "AllLocked",
         "end_alarm_state": "AlarmDisarmed"
-
       },
       {
         "action": "LOCK",

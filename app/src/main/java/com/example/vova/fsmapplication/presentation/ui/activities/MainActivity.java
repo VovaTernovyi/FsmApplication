@@ -2,8 +2,8 @@ package com.example.vova.fsmapplication.presentation.ui.activities;
 
 import android.app.Fragment;
 import android.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import com.example.vova.fsmapplication.R;
 import com.example.vova.fsmapplication.presentation.ui.fragments.FsmFragment;

@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
+import com.example.vova.fsmapplication.AppCore;
+import com.example.vova.fsmapplication.R;
 import com.example.vova.fsmapplication.domain.FsmItem;
 import com.example.vova.fsmapplication.domain.FsmItems;
 import com.example.vova.fsmapplication.presentation.mvp.holders.FsmViewHolder;
@@ -17,10 +19,17 @@ import com.jakewharton.rxbinding.view.RxView;
 
 public class FsmPresenter extends BasePresenter<FsmView, FsmModel, FsmViewHolder> {
 
-    FsmItems mItems;
+    private static final String LOCK = "LOCK";
+    private static final String LOCKx2 = "LOCKx2";
+    private static final String UNLOCK = "UNLOCK";
+    private static final String UNLOCKx2 = "UNLOCKx2";
 
-    private String mAlarmStatus = "AlarmDisarmed";
-    private String mDoorsStatus = "AllLocked";
+    private FsmItems mItems;
+
+    private String mAlarmStatus = AppCore.getInstance().getResources()
+            .getString(R.string.alarm_disarmed_status);
+    private String mDoorsStatus = AppCore.getInstance().getResources()
+            .getString(R.string.all_unlocked_status);
 
     public FsmPresenter() {
         setModel(new FsmModel());
@@ -32,10 +41,10 @@ public class FsmPresenter extends BasePresenter<FsmView, FsmModel, FsmViewHolder
         mItems = processGetFsm();
         getView().updateStatus(mDoorsStatus, mAlarmStatus);
 
-        RxView.clicks(getViewHolder().getLockButton()).subscribe(aVoid -> doAction("LOCK"));
-        RxView.clicks(getViewHolder().getLockX2Button()).subscribe(aVoid -> doAction("LOCKx2"));
-        RxView.clicks(getViewHolder().getUnlockButton()).subscribe(aVoid -> doAction("UNLOCK"));
-        RxView.clicks(getViewHolder().getUnlockX2Button()).subscribe(aVoid -> doAction("UNLOCKx2"));
+        RxView.clicks(getViewHolder().getLockButton()).subscribe(aVoid -> doAction(LOCK));
+        RxView.clicks(getViewHolder().getLockX2Button()).subscribe(aVoid -> doAction(LOCKx2));
+        RxView.clicks(getViewHolder().getUnlockButton()).subscribe(aVoid -> doAction(UNLOCK));
+        RxView.clicks(getViewHolder().getUnlockX2Button()).subscribe(aVoid -> doAction(UNLOCKx2));
     }
 
     private void doAction(String action) {
@@ -46,6 +55,7 @@ public class FsmPresenter extends BasePresenter<FsmView, FsmModel, FsmViewHolder
                 mAlarmStatus = item.getEndAlarmState();
                 mDoorsStatus = item.getEndDoorsState();
                 getView().updateStatus(mDoorsStatus, mAlarmStatus);
+                break;
             }
         }
     }
@@ -53,6 +63,4 @@ public class FsmPresenter extends BasePresenter<FsmView, FsmModel, FsmViewHolder
     private FsmItems processGetFsm() {
         return getModel().getFsmStates();
     }
-
-
 }

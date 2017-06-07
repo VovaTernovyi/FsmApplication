@@ -40,19 +40,23 @@ public class FsmFragment extends Fragment implements FsmView {
 
     @Override
     public void updateStatus(String doors, String alarm) {
-        if (doors.equals("AllUnlocked") && alarm.equals("AlarmDisarmed")) {
+        if (doors.equals(getString(R.string.all_unlocked_status))
+                && alarm.equals(getString(R.string.alarm_disarmed_status))) {
             mBinding.textViewStatus.setText(doors + "_" + alarm);
             mBinding.imageGreen.setVisibility(View.VISIBLE);
             mBinding.imageRed.setVisibility(View.INVISIBLE);
-        } else if (doors.equals("AllLocked") && alarm.equals("AlarmDisarmed")) {
+        } else if (doors.equals(getString(R.string.all_locked_status))
+                && alarm.equals(getString(R.string.alarm_disarmed_status))) {
             mBinding.textViewStatus.setText(doors + "_" + alarm);
             mBinding.imageGreen.setVisibility(View.VISIBLE);
             mBinding.imageRed.setVisibility(View.INVISIBLE);
-        } else if (doors.equals("AllLocked") && alarm.equals("AlarmArmed")) {
+        } else if (doors.equals(getString(R.string.all_locked_status))
+                && alarm.equals(getString(R.string.alarm_armed_status))) {
             mBinding.textViewStatus.setText(doors + "_" + alarm);
             mBinding.imageGreen.setVisibility(View.INVISIBLE);
             mBinding.imageRed.setVisibility(View.VISIBLE);
-        } else if (doors.equals("DriverUnlocked") && alarm.equals("AlarmDisarmed")) {
+        } else if (doors.equals(getString(R.string.driver_unlocked_status))
+                && alarm.equals(getString(R.string.alarm_disarmed_status))) {
             mBinding.textViewStatus.setText(doors + "_" + alarm);
             mBinding.imageGreen.setVisibility(View.VISIBLE);
             mBinding.imageRed.setVisibility(View.INVISIBLE);

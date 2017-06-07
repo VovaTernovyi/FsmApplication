@@ -10,7 +10,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="64dp"
+            android:layout_marginTop="@dimen/imageview_alarm_margin_top"
             android:src="@drawable/green_circle"
             android:visibility="visible" />
 
@@ -19,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="64dp"
+            android:layout_marginTop="@dimen/imageview_alarm_margin_top"
             android:src="@drawable/red_circle"
             android:visibility="invisible" />
 
@@ -31,14 +31,14 @@
             android:gravity="center"
             android:text="Text"
             android:textAllCaps="false"
-            android:textSize="24dp" />
+            android:textSize="@dimen/textview_status_text_size" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/textView_status"
             android:layout_centerInParent="true"
-            android:layout_marginTop="48dp"
+            android:layout_marginTop="@dimen/layout_buttons_margin_top"
             android:orientation="horizontal">
 
             <LinearLayout
@@ -82,7 +82,6 @@
 
             </LinearLayout>
         </LinearLayout>
-
     </RelativeLayout>
 
 </layout>

@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">FsmApplication</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="all_unlocked_status">AllUnlocked</string>
+    <string name="all_locked_status">AllLocked</string>
+    <string name="driver_unlocked_status">DriverUnlocked</string>
+    <string name="alarm_disarmed_status">AlarmDisarmed</string>
+    <string name="alarm_armed_status">AlarmArmed</string>
+
 </resources>
